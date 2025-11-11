@@ -1,21 +1,21 @@
-# Soroban Project
+# 🎯 Soroban Random Prize (Raffle Contract)
 
-## Project Structure
+This project implements a simple **raffle smart contract** written in **Rust** using the [Soroban SDK](https://soroban.stellar.org/).
 
-This repository uses the recommended structure for a Soroban project:
-```text
-.
-├── contracts
-│   └── hello_world
-│       ├── src
-│       │   ├── lib.rs
-│       │   └── test.rs
-│       └── Cargo.toml
-├── Cargo.toml
-└── README.md
-```
+It allows users to:
+- Enter the raffle with their Stellar address
+- Randomly draw a winner using Soroban’s pseudo-random generator (`env.prng()`)
+- Retrieve the last drawn winner from contract storage
 
-- New Soroban contracts can be put in `contracts`, each in their own directory. There is already a `hello_world` contract in there to get you started.
-- If you initialized this project with any other example contracts via `--with-example`, those contracts will be in the `contracts` directory as well.
-- Contracts should have their own `Cargo.toml` files that rely on the top-level `Cargo.toml` workspace for their dependencies.
-- Frontend libraries can be added to the top-level directory as well. If you initialized this project with a frontend template via `--frontend-template` you will have those files already included.
+> ⚠️ Note: This contract uses **insecure randomness** and should only be used for demo/testnet purposes — not for real mainnet prizes!
+
+---
+
+## 🚀 Features
+- `enter(env, entrant: Address)` → Add a participant to the raffle
+- `draw_winner(env)` → Select a random winner from the entrants
+- `get_winner(env)` → Get the most recent winner
+
+---
+
+## 🧱 Project Structure
