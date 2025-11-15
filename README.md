@@ -1,6 +1,6 @@
-# Soroban Project
+# 🎯 Soroban Random Prize (Raffle Contract)
 
-## Project Structure
+This project implements a simple **raffle smart contract** written in **Rust** using the [Soroban SDK](https://soroban.stellar.org/).
 
 CMD
 
